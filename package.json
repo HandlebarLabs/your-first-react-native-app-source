@@ -43,6 +43,7 @@
       "airbnb"
     ],
     "rules": {
+      "no-return-assign": "off",
       "arrow-body-style": "off",
       "react/jsx-filename-extension": [
         2,

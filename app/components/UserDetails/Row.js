@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { View, Text, Platform, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -28,5 +28,11 @@ const Row = ({ label, body, actions = [] }) => (
     </View>
   </View>
 );
+
+Row.propTypes = {
+  label: PropTypes.string,
+  body: PropTypes.string,
+  actions: PropTypes.array,
+};
 
 export default Row;

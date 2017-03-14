@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 
 import styles from './styles';
@@ -31,5 +31,11 @@ const Actions = ({ email, phone, cell }) => (
     />
   </View>
 );
+
+Actions.propTypes = {
+  email: PropTypes.string,
+  phone: PropTypes.string,
+  cell: PropTypes.string,
+};
 
 export default Actions;

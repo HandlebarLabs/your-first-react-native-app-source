@@ -22,4 +22,5 @@ class CustomInput extends Component {
     );
   }
 }
+
 export default CustomInput;

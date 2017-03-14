@@ -3,6 +3,6 @@ export const capitalizeFirstLetter = (string = '') => {
 };
 
 export const toPhoneNumber = (text = '') => {
-  text = text.replace(/[^\d]/g, "");
-  return text.replace(/(\d\d\d)(\d\d\d)(\d\d\d\d)/, '$1-$2-$3');
+  const modText = text.replace(/[^\d]/g, '');
+  return modText.replace(/(\d\d\d)(\d\d\d)(\d\d\d\d)/, '$1-$2-$3');
 };

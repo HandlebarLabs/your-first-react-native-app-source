@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React, { PropTypes } from 'react';
+import { View } from 'react-native';
 import moment from 'moment';
 
 import styles from './styles';
@@ -26,5 +26,12 @@ const Info = ({ login, dob, location, registered }) => (
     />
   </View>
 );
+
+Info.propTypes = {
+  location: PropTypes.object,
+  login: PropTypes.object,
+  dob: PropTypes.string,
+  registered: PropTypes.string,
+};
 
 export default Info;

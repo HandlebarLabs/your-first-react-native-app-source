@@ -1,5 +1,5 @@
-import React,  { Component } from 'react';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import React, { Component } from 'react';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { View } from 'react-native';
 
 import { TextInput } from '../components/TextInput';
@@ -33,7 +33,7 @@ class NewContact extends Component {
 
   handleSubmit = (index, override) => {
     if (index === fields.length - 1 || override) {
-      alert('submit');
+      alert('Submit');
     } else {
       const nextField = fields[index + 1];
       this[nextField.stateKey].focus();

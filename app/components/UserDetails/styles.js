@@ -3,7 +3,7 @@ import { StyleSheet, Dimensions } from 'react-native';
 import colors from '../../config/colors';
 
 const window = Dimensions.get('window');
-export const  ICON_SIZE = 25;
+export const ICON_SIZE = 25;
 
 export default StyleSheet.create({
   headerContainer: {

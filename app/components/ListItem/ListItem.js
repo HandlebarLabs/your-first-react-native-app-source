@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { View, Text, Image, TouchableHighlight, Platform } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -34,6 +34,11 @@ const ListItem = ({ contact, onPress }) => {
       </View>
     </TouchableHighlight>
   );
+};
+
+ListItem.propTypes = {
+  contact: PropTypes.object,
+  onPress: PropTypes.func,
 };
 
 export default ListItem;

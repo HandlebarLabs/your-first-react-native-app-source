@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import React, { Component, PropTypes } from 'react';
+import { ScrollView } from 'react-native';
 
 import { Header, Actions, Info } from '../components/UserDetails';
 import colors from '../config/colors';
@@ -16,5 +16,9 @@ class Details extends Component {
     );
   }
 }
+
+Details.propTypes = {
+  navigation: PropTypes.object,
+};
 
 export default Details;

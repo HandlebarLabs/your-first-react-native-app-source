@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { View, Text, Image } from 'react-native';
 
 import styles from './styles';
@@ -15,5 +15,10 @@ const Header = ({ picture, name }) => (
     </Text>
   </View>
 );
+
+Header.propTypes = {
+  picture: PropTypes.object,
+  name: PropTypes.object,
+};
 
 export default Header;
