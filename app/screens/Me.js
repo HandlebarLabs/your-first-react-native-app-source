@@ -1,10 +1,17 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { ScrollView } from 'react-native';
+
+import { Header, Actions, Info, EditButton } from '../components/UserDetails';
+import colors from '../config/colors';
+import { me } from '../config/data';
 
 const Me = () => (
-  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-    <Text>Me</Text>
-  </View>
+  <ScrollView style={{ backgroundColor: colors.background }}>
+    <Header {...me} />
+    <EditButton />
+    <Actions {...me} />
+    <Info {...me} />
+  </ScrollView>
 );
 
 export default Me;
