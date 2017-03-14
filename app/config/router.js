@@ -31,7 +31,16 @@ export const MeStack = StackNavigator({
       title: 'Me',
     },
   },
-})
+});
+
+export const NewContactStack = StackNavigator({
+  NewContact: {
+    screen: NewContact,
+    navigationOptions: {
+      title: 'New Contact',
+    },
+  },
+});
 
 export const Tabs = TabNavigator({
   Contacts: {
@@ -44,7 +53,7 @@ export const Tabs = TabNavigator({
     },
   },
   NewContact: {
-    screen: NewContact,
+    screen: NewContactStack,
     navigationOptions: {
       tabBar: {
         label: 'Add',

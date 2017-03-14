@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Platform } from 'react-native';
+import { View, Text, Platform, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import styles, { ICON_SIZE } from './styles';
@@ -13,13 +13,17 @@ const Row = ({ label, body, actions = [] }) => (
     </View>
     <View style={styles.actionIcons}>
       {actions.map((action, index) => (
-        <Icon
+        <TouchableOpacity
           key={index}
-          name={Platform.OS === 'ios' ? action.iconIOS : action.iconAndroid}
-          color={colors.link}
-          size={ICON_SIZE}
-          style={styles.actionIcon}
-        />
+          onPress={() => null}
+        >
+          <Icon
+            name={Platform.OS === 'ios' ? action.iconIOS : action.iconAndroid}
+            color={colors.link}
+            size={ICON_SIZE}
+            style={styles.actionIcon}
+          />
+        </TouchableOpacity>
       ))}
     </View>
   </View>

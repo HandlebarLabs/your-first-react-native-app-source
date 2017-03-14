@@ -57,22 +57,4 @@ export default StyleSheet.create({
   infoContainer: {
     paddingVertical: 15,
   },
-  editButtonContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 20,
-  },
-  editButton: {
-    borderColor: colors.border,
-    borderWidth: StyleSheet.hairlineWidth,
-    backgroundColor: colors.link,
-  },
-  editButtonText: {
-    textAlign: 'center',
-    paddingVertical: 15,
-    paddingHorizontal: 40,
-    color: '#fff',
-    fontSize: 14,
-    fontWeight: '500',
-  },
 });
