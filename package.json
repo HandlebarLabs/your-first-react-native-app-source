@@ -45,6 +45,8 @@
     "rules": {
       "no-return-assign": "off",
       "arrow-body-style": "off",
+      "no-alert": "off",
+      "react/no-array-index-key": "off",
       "react/jsx-filename-extension": [
         2,
         {

@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet, Dimensions, Platform } from 'react-native';
 
 import colors from '../../config/colors';
 
@@ -7,7 +7,7 @@ export default StyleSheet.create({
   container: {
     marginLeft: 20,
     borderBottomColor: colors.border,
-    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomWidth: Platform.OS === 'ios' ? StyleSheet.hairlineWidth : 0,
     marginTop: 15,
   },
   input: {
