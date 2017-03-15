@@ -3,7 +3,7 @@ import { FlatList } from 'react-native';
 
 import { contacts } from '../config/data';
 import colors from '../config/colors';
-import { ListItem, Separator } from '../components/ListItem';
+import { ListItem } from '../components/ListItem';
 
 class Contacts extends Component {
   handleRowPress = (contact) => {
@@ -19,7 +19,6 @@ class Contacts extends Component {
           <ListItem contact={item} onPress={() => this.handleRowPress(item)} />
         }
         keyExtractor={(item) => item.email}
-        ItemSeparatorComponent={Separator}
       />
     );
   }
