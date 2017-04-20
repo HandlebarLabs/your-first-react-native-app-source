@@ -11,7 +11,7 @@
   "dependencies": {
     "moment": "^2.17.1",
     "react": "^16.0.0-alpha.6",
-    "react-native": "^0.43.1",
+    "react-native": "^0.43.3",
     "react-native-keyboard-aware-scroll-view": "^0.2.7",
     "react-native-vector-icons": "^4.0.0",
     "react-navigation": "git+https://github.com/react-community/react-navigation.git"
