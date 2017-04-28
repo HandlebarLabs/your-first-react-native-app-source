@@ -1,78 +1,29 @@
 {
   "name": "YFRNAppSource",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
-    "lint": "eslint app/",
-    "lint:fix": "eslint app/ --fix"
-  },
-  "dependencies": {
-    "moment": "2.18.1",
-    "react": "16.0.0-alpha.6",
-    "react-native": "0.43.4",
-    "react-native-keyboard-aware-scroll-view": "0.2.8",
-    "react-native-vector-icons": "4.0.1",
-    "react-navigation": "1.0.0-beta.9"
-  },
   "devDependencies": {
-    "babel-eslint": "^7.1.1",
-    "babel-jest": "19.0.0",
-    "babel-preset-react-native": "1.9.1",
-    "eslint": "^3.17.1",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.0",
-    "jest": "19.0.2",
-    "react-test-renderer": "15.4.2"
+    "react-native-scripts": "0.0.29",
+    "jest-expo": "^0.4.0",
+    "react-test-renderer": "16.0.0-alpha.6"
+  },
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "node node_modules/jest/bin/jest.js --watch"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "jest-expo"
   },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "env": {
-      "browser": true
-    },
-    "plugins": [
-      "react"
-    ],
-    "extends": [
-      "airbnb"
-    ],
-    "rules": {
-      "no-return-assign": "off",
-      "arrow-body-style": "off",
-      "no-alert": "off",
-      "react/no-array-index-key": "off",
-      "react/jsx-filename-extension": [
-        2,
-        {
-          "extensions": [
-            ".js",
-            ".jsx"
-          ]
-        }
-      ],
-      "react/forbid-prop-types": [
-        2,
-        {
-          "forbid": [
-            "any"
-          ]
-        }
-      ],
-      "react/require-default-props": [
-        0
-      ],
-      "arrow-parens": [
-        0
-      ],
-      "no-underscore-dangle": [
-        0
-      ]
-    }
+  "dependencies": {
+    "expo": "^16.0.0",
+    "moment": "2.18.1",
+    "react": "16.0.0-alpha.6",
+    "react-native": "^0.43.4",
+    "react-native-keyboard-aware-scroll-view": "0.2.8",
+    "react-navigation": "1.0.0-beta.9"
   }
 }

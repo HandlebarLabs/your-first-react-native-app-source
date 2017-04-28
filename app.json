@@ -1,4 +1,5 @@
 {
-  "name": "YFRNAppSource",
-  "displayName": "YFRNAppSource"
+  "expo": {
+    "sdkVersion": "16.0.0"
+  }
 }
