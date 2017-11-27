@@ -46,9 +46,10 @@ class NewContact extends Component {
         {fields.map((field, index) => (
           <TextInput
             key={field.stateKey}
+            onChangeText={(text) => this.onInputChange(text, field.stateKey)}
+
             ref={(input) => this[field.stateKey] = input}
             value={this.state[field.stateKey]}
-            onChangeText={(text) => this.onInputChange(text, field.stateKey)}
             returnKeyType={index === fields.length - 1 ? 'done' : 'next'}
             onSubmitEditing={() => this.handleSubmit(index)}
             {...field}
