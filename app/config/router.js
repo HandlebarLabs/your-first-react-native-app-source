@@ -2,8 +2,12 @@
 
 import React from 'react';
 import { Platform } from 'react-native';
-import { TabNavigator, StackNavigator, DrawerNavigator } from 'react-navigation';
-import Icon from 'react-native-vector-icons/Ionicons';
+import {
+  TabNavigator,
+  StackNavigator,
+  DrawerNavigator,
+} from 'react-navigation';
+import { Ionicons } from '@expo/vector-icons';
 
 import Contacts from '../screens/Contacts';
 import NewContact from '../screens/NewContact';
@@ -11,6 +15,8 @@ import Me from '../screens/Me';
 import Details from '../screens/Details';
 import { capitalizeFirstLetter } from '../helpers/string';
 import { DrawerButton } from '../components/Header';
+
+const ICON_PREFIX = Platform.OS === 'ios' ? 'ios' : 'md';
 
 const LeftDrawerButton = ({ navigate }) => {
   if (Platform.OS === 'android') {
@@ -23,26 +29,27 @@ const LeftDrawerButton = ({ navigate }) => {
 export const ContactsStack = StackNavigator({
   Contacts: {
     screen: Contacts,
-    navigationOptions: ({ navigation }) => ({
+    navigationOptions: props => ({
       title: 'Contacts',
-      headerLeft: <LeftDrawerButton {...navigation} />
+      headerLeft: <LeftDrawerButton {...props} />,
     }),
   },
   Details: {
     screen: Details,
-    navigationOptions: ({ navigation }) => ({
-      headerTitle: `${capitalizeFirstLetter(navigation.state.params.name.first)} ${capitalizeFirstLetter(navigation.state.params.name.last)}`,
+    navigationOptions: props => ({
+      title: `${capitalizeFirstLetter(
+        props.navigation.state.params.name.first,
+      )} ${capitalizeFirstLetter(props.navigation.state.params.name.last)}`,
     }),
   },
 });
 
-
 export const MeStack = StackNavigator({
   Me: {
     screen: Me,
-    navigationOptions: ({ navigation }) => ({
+    navigationOptions: props => ({
       title: 'Me',
-      headerLeft: <LeftDrawerButton {...navigation} />,
+      headerLeft: <LeftDrawerButton {...props} />,
     }),
   },
 });
@@ -50,9 +57,9 @@ export const MeStack = StackNavigator({
 export const NewContactStack = StackNavigator({
   NewContact: {
     screen: NewContact,
-    navigationOptions: ({ navigation }) => ({
+    navigationOptions: props => ({
       title: 'New Contact',
-      headerLeft: <LeftDrawerButton {...navigation} />,
+      headerLeft: <LeftDrawerButton {...props} />,
     }),
   },
 });
@@ -62,27 +69,45 @@ export const Tabs = TabNavigator({
     screen: ContactsStack,
     navigationOptions: {
       tabBarLabel: 'Contacts',
-      tabBarIcon: ({ tintColor }) => <Icon name="ios-list" size={35} color={tintColor} />,
+      tabBarIcon: ({ tintColor }) => (
+        <Ionicons
+          name={`${ICON_PREFIX}-list`}
+          size={35}
+          style={{ color: tintColor }}
+        />
+      ),
     },
   },
   NewContact: {
     screen: NewContactStack,
     navigationOptions: {
-      tabBarLabel: 'New Contact',
-      tabBarIcon: ({ tintColor }) => <Icon name="ios-add" size={35} color={tintColor} />,
+      tabBarLabel: 'Add',
+      tabBarIcon: ({ tintColor }) => (
+        <Ionicons
+          name={`${ICON_PREFIX}-add`}
+          size={35}
+          style={{ color: tintColor }}
+        />
+      ),
     },
   },
   Me: {
     screen: MeStack,
     navigationOptions: {
       tabBarLabel: 'Me',
-      tabBarIcon: ({ tintColor }) => <Icon name="ios-contact" size={35} color={tintColor} />,
+      tabBarIcon: ({ tintColor }) => (
+        <Ionicons
+          name={`${ICON_PREFIX}-contact`}
+          size={35}
+          style={{ color: tintColor }}
+        />
+      ),
     },
   },
 });
 
 export const Drawer = DrawerNavigator({
-  Contact: {
+  Contacts: {
     screen: ContactsStack,
     navigationOptions: {
       drawerLabel: 'Contacts',
@@ -91,7 +116,7 @@ export const Drawer = DrawerNavigator({
   NewContact: {
     screen: NewContactStack,
     navigationOptions: {
-      drawerLabel: 'New Contact',
+      drawerLabel: 'Add',
     },
   },
   Me: {
@@ -101,4 +126,3 @@ export const Drawer = DrawerNavigator({
     },
   },
 });
-

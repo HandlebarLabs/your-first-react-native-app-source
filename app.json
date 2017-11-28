@@ -1,5 +1,24 @@
 {
   "expo": {
-    "sdkVersion": "16.0.0"
+    "name": "Create Your First RN App",
+    "description": "Test app to start development of RN app with CRNA",
+    "slug": "firstrnapp",
+    "privacy": "public",
+    "sdkVersion": "22.0.0",
+    "orientation": "portrait",
+    "icon": "./app/assets/app-icons/ios-app-icon.png",
+    "splash": {
+      "image": "./app/assets/splash/splash-screen.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#4db389"
+    },
+    "ios": {
+      "bundleIdentifier": "com.mgscreativa.firstrnapp",
+      "icon": "./app/assets/app-icons/ios-app-icon.png"
+    },
+    "android": {
+      "package": "com.mgscreativa.firstrnapp",
+      "icon": "./app/assets/app-icons/android-app-icon.png"
+    }
   }
 }
