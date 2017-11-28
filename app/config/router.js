@@ -109,20 +109,20 @@ export const Tabs = TabNavigator({
 export const Drawer = DrawerNavigator({
   Contacts: {
     screen: ContactsStack,
-    drawer: {
-      label: 'Contacts',
+    navigationOptions: {
+      drawerLabel: 'Contacts',
     },
   },
   NewContact: {
     screen: NewContactStack,
-    drawer: {
-      label: 'Add',
+    navigationOptions: {
+      drawerLabel: 'Add',
     },
   },
   Me: {
     screen: MeStack,
-    drawer: {
-      label: 'Me',
+    navigationOptions: {
+      drawerLabel: 'Me',
     },
   },
 });
